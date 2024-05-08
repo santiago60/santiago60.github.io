@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejecutar Servidores</title>
-</head>
-<body>
+  </head>
+  <body>
     <center>
-        <h1>Ngrok Con Python</h1>
+      <h1>Ngrok Con Python - Windows</h1>
+
+      <p>
+        <span
+          >Paso 1 : Nos Localizamos en la carpeta a compartir y ejecutamos : </span
+        >python -m http.server 80
+      </p>
+      <p>
+        <span
+          >Paso 2 : Nos ubicamos donde se encuentra el archivo 'ngrok.exe y
+          ejecutamos : '</span
+        >./ngrok.exe http 80
+      </p>
+
+      <h1>Ngrok Con Xampp - Windows</h1>
+      <p><span>Paso 1 : </span>Ejecutamos servidor Xampp</p>
+      <p>
+        <span>Paso 2 : Nos Localizamos en la carpeta htdocs y </span>abrimos el
+        archivo index.php
+      </p>
+      <p>
+        <span>Paso 3 : </span> modificamos el nombre 'ubicacion',
+        header('Location: '.$uri.'/ubicacion');
+      </p>
+      <p>
+        <span
+          >Paso 4 : Nos ubicamos donde se encuentra el archivo 'ngrok.exe y
+          ejecutamos : '</span
+        >./ngrok.exe http 80
+      </p>
+
+
+      <h1>Acceder Remotamente Movil - Python o Xampp</h1>
+      <p><span>Paso 1 : </span>Ejecutamos servidor Xampp o python</p>
+      <p>
+        <span>Paso 2 : ipconfig y copiamos la ip</span>
+      </p>
     </center>
-    <p><span>Paso 1 : Nos Localizamos en la carpeta a compartir y ejecutamos : </span>python -m http.server 80</p>
-    <p><span>Paso 2 : Nos ubicamos donde se encuentra el archivo 'ngrok.exe y ejecutamos : '</span>./ngrok.exe http 80</p>
-    
-    <center>
-        <h1>Ngrok Con Xampp</h1>
-    </center>
-    <p><span>Paso 1 : </span>Ejecutamos servidor Xampp</p>
-    <p><span>Paso 2 : Nos Localizamos en la carpeta htdocs y </span>abrimos el archivo index.php</p>
-    <p><span>Paso 3 : </span> modificamos el nombre 'ubicacion', header('Location: '.$uri.'/ubicacion');</p>
-    <p><span>Paso 4 : Nos ubicamos donde se encuentra el archivo 'ngrok.exe y ejecutamos : '</span>./ngrok.exe http 80</p>
-</body>
+  </body>
 </html>
