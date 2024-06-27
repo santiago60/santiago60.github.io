@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejecutar Servidores</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
   </head>
   <body>
     <center>
@@ -70,7 +71,7 @@
       </p>
 
       <h1>Ejecutar Servidor Tor .onion</h1>
-      <p>
+      <h5>
         <pre>
           sudo apt update
           sudo apt install tor
@@ -94,6 +95,7 @@
 
 
           Agrega la siguiente configuración, reemplazando "8080" con tu puerto y ajustando las rutas según tus archivos:
+          <code>
           server {
               listen 127.0.0.1:8080;
               server_name tu_direccion_onion.onion;
@@ -103,13 +105,16 @@
                   index index.html;
               }
           }
+        </code>
 
           Crea un enlace simbólico al directorio sites-enabled:
           sudo ln -s /etc/nginx/sites-available/oculto /etc/nginx/sites-enabled/
 
           sudo systemctl restart nginx
         </pre>
-      </p>
+      </h5>
     </center>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
   </body>
 </html>
