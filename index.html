@@ -77,8 +77,10 @@ code {
         <span>Paso 5 : Desactivarlo: deactivate</span>
       </p>
 
+
       <h1>Ejecutar Servidor Tor .onion</h1>
-      <h5>
+    </center>
+      <h3>
         <pre>
           sudo apt update
           sudo apt install tor
@@ -102,8 +104,7 @@ code {
 
 
           Agrega la siguiente configuración, reemplazando "8080" con tu puerto y ajustando las rutas según tus archivos:
-          </h5>
-          <code>
+          
           server {
               listen 127.0.0.1:8080;
               server_name tu_direccion_onion.onion;
@@ -113,14 +114,12 @@ code {
                   index index.html;
               }
           }
-        </code>
 
           Crea un enlace simbólico al directorio sites-enabled:
           sudo ln -s /etc/nginx/sites-available/oculto /etc/nginx/sites-enabled/
 
           sudo systemctl restart nginx
         </pre>
-
-    </center>
+      </h3>
   </body>
 </html>
