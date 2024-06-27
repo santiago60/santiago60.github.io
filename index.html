@@ -68,6 +68,45 @@
       <p>
         <span>Paso 5 : Desactivarlo: deactivate</span>
       </p>
+
+      <h1>Ejecutar Servidor Tor .onion</h1>
+      <p><span>sudo apt update
+sudo apt install tor
+sudo nano /etc/tor/torrc
+
+Descomenta o agrega las siguientes líneas al final del archivo:
+HiddenServiceDir /var/lib/tor/oculto/
+HiddenServicePort 80 127.0.0.1:8080
+
+sudo systemctl restart tor
+
+cd /var/lib/tor/oculto/
+cat hostname
+
+sudo apt install python3
+python3 -m http.server 8080
+
+---produccion---
+sudo apt install nginx
+sudo nano /etc/nginx/sites-available/oculto
+
+
+Agrega la siguiente configuración, reemplazando "8080" con tu puerto y ajustando las rutas según tus archivos:
+server {
+    listen 127.0.0.1:8080;
+    server_name tu_direccion_onion.onion;
+
+    location / {
+        root /var/www/mi_servicio_oculto;
+        index index.html;
+    }
+}
+
+Crea un enlace simbólico al directorio sites-enabled:
+sudo ln -s /etc/nginx/sites-available/oculto /etc/nginx/sites-enabled/
+
+sudo systemctl restart nginx
+</span></p>
     </center>
   </body>
 </html>
